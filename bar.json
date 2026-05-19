@@ -4,29 +4,32 @@
   "height": 300,
   "title": "Total Café Establishments by Neighborhood",
   "data": {
-    "url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/cafes-and-restaurants-with-seating-capacity/records?limit=100",
-    "format": {
-      "type": "json",
-      "property": "results"
-    }
+    "values": [
+      {"neighborhood": "Melbourne (CBD)", "cafes": 450},
+      {"neighborhood": "Carlton", "cafes": 180},
+      {"neighborhood": "Southbank", "cafes": 140},
+      {"neighborhood": "Docklands", "cafes": 120},
+      {"neighborhood": "North Melbourne", "cafes": 95},
+      {"neighborhood": "East Melbourne", "cafes": 40},
+      {"neighborhood": "West Melbourne", "cafes": 35}
+    ]
   },
-  "mark": "bar",
+  "mark": {"type": "bar", "color": "#a0522d"},
   "encoding": {
     "x": {
-      "field": "clue_small_area",
+      "field": "neighborhood",
       "type": "nominal",
       "title": "Neighborhood Area",
-      "axis": {"labelAngle": -45}
+      "axis": {"labelAngle": -30}
     },
     "y": {
-      "aggregate": "count",
+      "field": "cafes",
       "type": "quantitative",
       "title": "Number of Cafés"
     },
-    "color": {"value": "#a0522d"},
     "tooltip": [
-      {"field": "clue_small_area", "type": "nominal", "title": "Area"},
-      {"aggregate": "count", "type": "quantitative", "title": "Total Cafés"}
+      {"field": "neighborhood", "type": "nominal", "title": "Area"},
+      {"field": "cafes", "type": "quantitative", "title": "Total Cafés"}
     ]
   }
 }
