@@ -4,10 +4,10 @@
   "height": 350,
   "title": "Seating Strategies: Indoor vs. Outdoor Capacity",
   "data": {
-    "url": "https://data.melbourne.vic.gov.au/api/v2/catalog/datasets/cafes-and-restaurants-with-seating-capacity/exports/json",
+    "url": "https://data.melbourne.vic.gov.au/api/v2/catalog/datasets/cafes-and-restaurants-with-seating-capacity/exports/json?limit=100",
     "format": {"type": "json"}
   },
-  "mark": {"type": "point", "filled": true, "size": 40},
+  "mark": {"type": "point", "filled": true, "size": 60},
   "encoding": {
     "x": {
       "field": "seats_indoor",
@@ -26,9 +26,8 @@
     },
     "tooltip": [
       {"field": "trading_name", "type": "nominal", "title": "Café Name"},
-      {"field": "clue_small_area", "type": "nominal", "title": "Area"},
-      {"field": "seats_indoor", "type": "quantitative", "title": "Indoor Seats"},
-      {"field": "seats_outdoor", "type": "quantitative", "title": "Outdoor Seats"}
+      {"field": "seats_indoor", "type": "quantitative"},
+      {"field": "seats_outdoor", "type": "quantitative"}
     ]
   }
 }
