@@ -4,7 +4,7 @@
   "height": 300,
   "title": "Total Café Establishments by Neighborhood",
   "data": {
-    "url": "https://data.melbourne.vic.gov.au/api/v2/catalog/datasets/cafes-and-restaurants-with-seating-capacity/exports/json",
+    "url": "https://data.melbourne.vic.gov.au/api/v2/catalog/datasets/cafes-and-restaurants-with-seating-capacity/exports/json?limit=100",
     "format": {"type": "json"}
   },
   "mark": "bar",
@@ -13,7 +13,6 @@
       "field": "clue_small_area",
       "type": "nominal",
       "title": "Neighborhood Area",
-      "sort": "-y",
       "axis": {"labelAngle": -45}
     },
     "y": {
@@ -21,9 +20,7 @@
       "type": "quantitative",
       "title": "Number of Cafés"
     },
-    "color": {
-      "value": "#a0522d"
-    },
+    "color": {"value": "#a0522d"},
     "tooltip": [
       {"field": "clue_small_area", "type": "nominal", "title": "Area"},
       {"aggregate": "count", "type": "quantitative", "title": "Total Cafés"}
