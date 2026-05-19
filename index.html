@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melbourne Café Culture Evolution</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        body { margin: 20px; font-family: Arial, sans-serif; background-color: #fafafa; }
+        .page { max-width: 900px; margin: auto; background: white; padding: 40px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        .chart-container { margin: 30px 0; width: 100%; }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <h1>The Spatial & Structural Evolution of Melbourne’s Café Culture</h1>
+    <p><strong>Author:</strong> Daksh Sachan | <strong>Date:</strong> May 2026</p> <hr>
+
+    <h2>Introduction</h2>
+    <p>Melbourne is globally celebrated as a premier coffee capital, built on a vibrant ecosystem of independent operators. This visualization explores how the city's unique hospitality footprint shifts across different neighborhoods, analyzing seating dynamics and geographic densities.</p>
+
+    <h2>1. Geographic Distribution of Cafés</h2>
+    <p>This map layers the locations of all dining and café establishments across municipality boundaries, revealing dense commercial clusters.</p>
+    <div id="map" class="chart-container"></div>
+
+    <h2>2. Café Counts by Neighborhood Area</h2>
+    <p>A neighborhood breakdown identifying which local areas serve as the heaviest hubs for café culture.</p>
+    <div id="chart2" class="chart-container"></div>
+
+    <h2>3. Seating Dynamics: Indoor vs. Outdoor</h2>
+    <p>An exploration of spatial layouts, tracking how businesses distribute their capacity between indoor dining and al fresco street seating.</p>
+    <div id="chart3" class="chart-container"></div>
+</div>
+
+<script>
+    // Link your upcoming JSON chart files to your webpage containers
+    vegaEmbed('#map', 'map_spec.json');
+    vegaEmbed('#chart2', 'bar_chart_spec.json');
+    vegaEmbed('#chart3', 'scatter_spec.json');
+</script>
+
+</body>
+</html>
