@@ -24,8 +24,7 @@
         "latitude": {"field": "latitude", "type": "quantitative"},
         "tooltip": [
           {"field": "trading_name", "type": "nominal", "title": "Café Name"},
-          {"field": "clue_small_area", "type": "nominal", "title": "Area"},
-          {"field": "seating_type", "type": "nominal", "title": "Type"}
+          {"field": "clue_small_area", "type": "nominal", "title": "Area"}
         ]
       }
     }
