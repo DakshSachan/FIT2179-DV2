@@ -2,31 +2,28 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 400,
-  "title": "Mapping Melbourne's Café Footprint",
-  "layer": [
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/su9526/clue/master/clue_mn.geojson",
-        "format": {"type": "json"}
-      },
-      "projection": {"type": "mercator"},
-      "mark": {"type": "geoshape", "fill": "#eaeaea", "stroke": "#ffffff", "strokeWidth": 1.5}
+  "title": "Geographic Clustering of Melbourne Cafés",
+  "data": {
+    "url": "https://data.melbourne.vic.gov.au/api/v2/catalog/datasets/cafes-and-restaurants-with-seating-capacity/exports/json",
+    "format": {"type": "json"}
+  },
+  "mark": {"type": "circle", "size": 12, "opacity": 0.5, "color": "#8b5a2b"},
+  "encoding": {
+    "x": {
+      "field": "longitude",
+      "type": "quantitative",
+      "scale": {"zero": false},
+      "title": "Longitude"
     },
-    {
-      "data": {
-        "url": "https://data.melbourne.vic.gov.au/api/v2/catalog/datasets/cafes-and-restaurants-with-seating-capacity/exports/json",
-        "format": {"type": "json"}
-      },
-      "projection": {"type": "mercator"},
-      "mark": {"type": "circle", "size": 15, "opacity": 0.6, "color": "#8b5a2b"},
-      "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"},
-        "tooltip": [
-          {"field": "trading_name", "type": "nominal", "title": "Café Name"},
-          {"field": "clue_small_area", "type": "nominal", "title": "Area"}
-        ]
-      }
-    }
-  ]
+    "y": {
+      "field": "latitude",
+      "type": "quantitative",
+      "scale": {"zero": false},
+      "title": "Latitude"
+    },
+    "tooltip": [
+      {"field": "trading_name", "type": "nominal", "title": "Café Name"},
+      {"field": "clue_small_area", "type": "nominal", "title": "Area"}
+    ]
+  }
 }
