@@ -1,11 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
+  "width": 600,
   "height": 300,
   "title": "Total Café Establishments by Neighborhood",
   "data": {
-    "url": "https://data.melbourne.vic.gov.au/api/v2/catalog/datasets/cafes-and-restaurants-with-seating-capacity/exports/json?limit=100",
-    "format": {"type": "json"}
+    "url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/cafes-and-restaurants-with-seating-capacity/records?limit=100",
+    "format": {
+      "type": "json",
+      "property": "results"
+    }
   },
   "mark": "bar",
   "encoding": {
