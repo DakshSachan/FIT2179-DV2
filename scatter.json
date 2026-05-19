@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 350,
+  "title": "Seating Strategies: Indoor vs. Outdoor Capacity",
+  "data": {
+    "url": "https://data.melbourne.vic.gov.au/api/v2/catalog/datasets/cafes-and-restaurants-with-seating-capacity/exports/json",
+    "format": {"type": "json"}
+  },
+  "mark": {"type": "point", "filled": true, "size": 40},
+  "encoding": {
+    "x": {
+      "field": "seats_indoor",
+      "type": "quantitative",
+      "title": "Indoor Seats Capacity"
+    },
+    "y": {
+      "field": "seats_outdoor",
+      "type": "quantitative",
+      "title": "Outdoor Seats Capacity"
+    },
+    "color": {
+      "field": "clue_small_area",
+      "type": "nominal",
+      "title": "Neighborhood"
+    },
+    "tooltip": [
+      {"field": "trading_name", "type": "nominal", "title": "Café Name"},
+      {"field": "clue_small_area", "type": "nominal", "title": "Area"},
+      {"field": "seats_indoor", "type": "quantitative", "title": "Indoor Seats"},
+      {"field": "seats_outdoor", "type": "quantitative", "title": "Outdoor Seats"}
+    ]
+  }
+}
