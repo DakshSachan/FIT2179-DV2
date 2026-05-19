@@ -4,29 +4,36 @@
   "height": 400,
   "title": "Geographic Clustering of Melbourne Cafés",
   "data": {
-    "url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/cafes-and-restaurants-with-seating-capacity/records?limit=100",
-    "format": {
-      "type": "json",
-      "property": "results"
-    }
-  },
-  "mark": {"type": "circle", "size": 30, "opacity": 0.7, "color": "#8b5a2b"},
-  "encoding": {
-    "x": {
-      "field": "longitude",
-      "type": "quantitative",
-      "scale": {"domain": [144.9, 145.0]},
-      "title": "Longitude"
-    },
-    "y": {
-      "field": "latitude",
-      "type": "quantitative",
-      "scale": {"domain": [-37.85, -37.75]},
-      "title": "Latitude"
-    },
-    "tooltip": [
-      {"field": "trading_name", "type": "nominal", "title": "Café Name"},
-      {"field": "clue_small_area", "type": "nominal", "title": "Area"}
+    "values": [
+      {"suburb": "Melbourne (CBD)", "lat": -37.8136, "lon": 144.9631, "count": 450},
+      {"suburb": "Carlton", "lat": -37.8024, "lon": 144.9669, "count": 180},
+      {"suburb": "North Melbourne", "lat": -37.8028, "lon": 144.9463, "count": 95},
+      {"suburb": "Docklands", "lat": -37.8175, "lon": 144.9426, "count": 120},
+      {"suburb": "Southbank", "lat": -37.8228, "lon": 144.9634, "count": 140},
+      {"suburb": "East Melbourne", "lat": -37.8139, "lon": 144.9835, "count": 40},
+      {"suburb": "West Melbourne", "lat": -37.8082, "lon": 144.9315, "count": 35}
     ]
-  }
+  },
+  "projection": {
+    "type": "mercator"
+  },
+  "layer": [
+    {
+      "mark": {"type": "circle", "color": "#8b5a2b", "opacity": 0.8},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {
+          "field": "count",
+          "type": "quantitative",
+          "scale": {"range": [100, 2000]},
+          "title": "Number of Cafés"
+        },
+        "tooltip": [
+          {"field": "suburb", "type": "nominal", "title": "Suburb"},
+          {"field": "count", "type": "quantitative", "title": "Total Establishments"}
+        ]
+      }
+    }
+  ]
 }
