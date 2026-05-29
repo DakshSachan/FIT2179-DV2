@@ -84,25 +84,15 @@ seating configurations.
 
 <div id="facet_grid" class="chart-box"></div>
 
-<h2>4. Macro Seating Variables Distribution</h2>
+<h3>Seating Capacity Composition</h3>
 
 <p>
-Seating capacity varies considerably between Melbourne's cafés.
-This distribution analysis highlights differences in venue size
-across key commercial precincts.
+This nested donut chart shows how Melbourne's total seating capacity is
+distributed across suburbs and how that capacity is divided between
+different seating types.
 </p>
 
-<div id="repeat_stack" class="chart-box"></div>
-
-<h3>Indoor vs Outdoor Seating by Suburb</h3>
-
-<p>
-Different precincts display different seating strategies, with some
-suburbs supporting larger outdoor dining environments.
-</p>
-
-<div id="indoor_outdoor" class="chart-box"></div>
-
+<div id="sunburst_chart" class="chart-box"></div>
 <h3>Largest Hospitality Venues</h3>
 
 <p>
@@ -151,15 +141,13 @@ vegaEmbed('#bar_chart', 'bar.json?v=5', {"actions": false}).catch(console.error)
 
 vegaEmbed('#facet_grid', 'seating_facets.json?v=5', {"actions": false}).catch(console.error);
 
-vegaEmbed('#repeat_stack', 'trends_repeat.json?v=5', {"actions": false}).catch(console.error);
-
-vegaEmbed('#indoor_outdoor', 'indoor_outdoor.json?v=1', {"actions": false}).catch(console.error);
-
 vegaEmbed('#largest_cafe', 'largest_cafe.json?v=1', {"actions": false}).catch(console.error);
 
 vegaEmbed('#seating_type', 'seating_type.json?v=1', {"actions": false}).catch(console.error);
 
 vegaEmbed('#income_chart', 'income_bar.json?v=1', {"actions": false}).catch(console.error);
+
+vegaEmbed('#sunburst_chart', 'seating_sunburst.json?v=1', {"actions": false}).catch(console.error);
 </script>
 
 </body>
