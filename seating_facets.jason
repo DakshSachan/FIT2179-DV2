@@ -9,8 +9,8 @@
     "title": "Suburbs"
   },
   "spec": {
-    "width": 260,
-    "height": 150,
+    "width": 320,
+    "height": 160,
     "mark": {"type": "bar", "color": "#8B5A2B"},
     "encoding": {
       "x": {
