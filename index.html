@@ -84,9 +84,42 @@ seating configurations.
 
 <div id="facet_grid" class="chart-box"></div>
 
-  <h2>4. Macro Seating Variables Distribution</h2>
-  <p>Seating capacity varies considerably between Melbourne's cafés. This distribution analysis highlights differences in venue size across key commercial precincts.</p>
-  <div id="repeat_stack" class="chart-box"></div>
+<h2>4. Macro Seating Variables Distribution</h2>
+
+<p>
+Seating capacity varies considerably between Melbourne's cafés.
+This distribution analysis highlights differences in venue size
+across key commercial precincts.
+</p>
+
+<div id="repeat_stack" class="chart-box"></div>
+
+<h3>Indoor vs Outdoor Seating by Suburb</h3>
+
+<p>
+Different precincts display different seating strategies, with some
+suburbs supporting larger outdoor dining environments.
+</p>
+
+<div id="indoor_outdoor" class="chart-box"></div>
+
+<h3>Largest Hospitality Venues</h3>
+
+<p>
+A small number of venues account for a significant proportion of
+Melbourne's hospitality seating capacity.
+</p>
+
+<div id="largest_cafes" class="chart-box"></div>
+
+<h3>Distribution of Seating Types</h3>
+
+<p>
+Indoor and outdoor seating contribute differently to Melbourne's
+café landscape.
+</p>
+
+<div id="seating_type_distribution" class="chart-box"></div>
 
   <h2>5. ABS Census Demographic Context</h2>
   <p>By combining café location data with ABS census information, we can explore whether higher-income areas support larger café and hospitality sectors. </p>
@@ -119,6 +152,12 @@ vegaEmbed('#bar_chart', 'bar.json?v=5', {"actions": false}).catch(console.error)
 vegaEmbed('#facet_grid', 'seating_facets.json?v=5', {"actions": false}).catch(console.error);
 
 vegaEmbed('#repeat_stack', 'trends_repeat.json?v=5', {"actions": false}).catch(console.error);
+
+vegaEmbed('#indoor_outdoor', 'indoor_outdoor.json?v=1', {"actions": false}).catch(console.error);
+
+vegaEmbed('#largest_cafes', 'largest_cafes.json?v=1', {"actions": false}).catch(console.error);
+
+vegaEmbed('#seating_type_distribution', 'seating_type_distribution.json?v=1', {"actions": false}).catch(console.error);
 
 vegaEmbed('#income_chart', 'income_bar.json?v=1', {"actions": false}).catch(console.error);
 </script>
