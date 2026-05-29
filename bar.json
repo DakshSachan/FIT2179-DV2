@@ -9,9 +9,10 @@
     "x": {
       "field": "CLUE small area",
       "type": "nominal",
+      "sort": "-y",
       "axis": {"labelAngle": -30},
       "title": "Suburbs"
-    },
+    }
     "y": {
       "field": "Number of seats",
       "type": "quantitative",
