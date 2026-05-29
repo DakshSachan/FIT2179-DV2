@@ -3,29 +3,29 @@
   "title": "ABS Census Demographic Context by Region",
   "vconcat": [
     {
-      "title": "Economic Profile: Household Weekly Income",
+      "title": "Economic Profile: Median Weekly Income",
       "data": {"url": "Income-Table 1.csv"},
-      "width": "container",
-      "height": 200,
-      "mark": {"type": "bar", "color": "#6F4E37", "cornerRadiusEnd": 4},
+      "width": 800,
+      "height": 180,
+      "mark": {"type": "bar", "color": "#4A2E1B", "cornerRadiusEnd": 4},
       "encoding": {
-        "x": {"field": "Postcode", "type": "nominal", "title": "Postcode Identifier"},
+        "x": {"field": "Postcode", "type": "nominal", "title": "Postcode"},
         "y": {"field": "Household Weekly Income", "type": "quantitative", "title": "Income ($/week)"},
         "tooltip": [
           {"field": "Postcode", "type": "nominal"},
-          {"field": "Household Weekly Income", "type": "quantitative"}
+          {"field": "Household Weekly Income", "type": "quantitative", "title": "Avg Income"}
         ]
       }
     },
     {
-      "title": "Social Profile: Professionals Distribution (%)",
+      "title": "Social Profile: White-Collar Professional Concentration (%)",
       "data": {"url": "Occupation-Table 1.csv"},
-      "width": "container",
-      "height": 200,
-      "mark": {"type": "bar", "color": "#C19A6B", "cornerRadiusEnd": 4},
+      "width": 800,
+      "height": 180,
+      "mark": {"type": "bar", "color": "#A67B5B", "cornerRadiusEnd": 4},
       "encoding": {
-        "x": {"field": "Postcode", "type": "nominal", "title": "Postcode Identifier"},
-        "y": {"field": "Professionals", "type": "quantitative", "title": "% of White-Collar Professionals"},
+        "x": {"field": "Postcode", "type": "nominal", "title": "Postcode"},
+        "y": {"field": "Professionals", "type": "quantitative", "title": "% Professionals"},
         "tooltip": [
           {"field": "Postcode", "type": "nominal"},
           {"field": "Professionals", "type": "quantitative"}
