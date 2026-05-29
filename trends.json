@@ -1,8 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "cafes-and-restaurants-with-seating-capacity.csv"},
-  "title": "Distribution Profile of Seat Densities",
-  "width": 950,
+  "data": {
+    "url": "cafes-and-restaurants-with-seating-capacity.csv",
+    "format": {"maxrows": 100000}
+  },
+  "title": "Distribution Profile of Seat Densities Across Melbourne",
+  "width": "container",
   "height": 300,
   "mark": {"type": "bar", "color": "#D2B48C"},
   "encoding": {
