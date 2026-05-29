@@ -2,9 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "cafes-and-restaurants-with-seating-capacity.csv"},
   "title": "Distribution Profile of Seat Densities",
-  "width": 650,
-  "height": 250,
-  "mark": {"type": "bar", "color": "#C19A6B"},
+  "width": 950,
+  "height": 300,
+  "mark": {"type": "bar", "color": "#D2B48C"},
   "encoding": {
     "x": {
       "field": "Number of seats", 
