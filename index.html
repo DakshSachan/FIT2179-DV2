@@ -93,7 +93,7 @@ across suburbs and how those seats are divided between indoor and outdoor spaces
 
 <div style="display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap;">
 
-  <div id="seating_donut" class="chart-box" style="flex:1; min-width:500px;"></div>
+  <div id="seating_type" class="chart-box" style="flex:1; min-width:500px;"></div>
 
   <div id="indoor_outdoor" class="chart-box" style="flex:1; min-width:500px;"></div>
 
@@ -106,15 +106,6 @@ Melbourne's hospitality seating capacity.
 </p>
 
 <div id="largest_cafe" class="chart-box"></div>
-
-<h3>Distribution of Seating Types</h3>
-
-<p>
-Indoor and outdoor seating contribute differently to Melbourne's
-café landscape.
-</p>
-
-<div id="seating_type" class="chart-box"></div>
 
   <h2>5. ABS Census Demographic Context</h2>
   <p>By combining café location data with ABS census information, we can explore whether higher-income areas support larger café and hospitality sectors. </p>
@@ -148,11 +139,9 @@ vegaEmbed('#facet_grid', 'seating_facets.json?v=5', {"actions": false}).catch(co
 
 vegaEmbed('#largest_cafe', 'largest_cafe.json?v=1', {"actions": false}).catch(console.error);
 
-vegaEmbed('#seating_type', 'seating_type.json?v=1', {"actions": false}).catch(console.error);
-
 vegaEmbed('#income_chart', 'income_bar.json?v=1', {"actions": false}).catch(console.error);
 
-vegaEmbed('#seating_donut', 'seating_donut.json?v=1', {"actions": false}).catch(console.error);
+vegaEmbed('#seating_type', 'seating_type.json?v=1', {"actions": false}).catch(console.error);
 
 vegaEmbed('#indoor_outdoor', 'indoor_outdoor.json?v=1', {"actions": false}).catch(console.error);
 </script>
