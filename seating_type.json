@@ -1,15 +1,84 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "cafes-and-restaurants-with-seating-capacity.csv"},
-  "mark": {"type": "arc"},
-  "encoding": {
-    "theta": {
-      "aggregate": "sum",
-      "field": "Number of seats"
+
+  "title": "Seating Capacity by Suburb and Seating Type",
+
+  "data": {
+    "url": "cafes-and-restaurants-with-seating-capacity.csv"
+  },
+
+  "view": {"stroke": null},
+
+  "layer": [
+
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 40,
+        "outerRadius": 90
+      },
+
+      "encoding": {
+        "theta": {
+          "aggregate": "sum",
+          "field": "Number of seats"
+        },
+
+        "color": {
+          "field": "CLUE small area",
+          "type": "nominal",
+          "title": "Suburb"
+        },
+
+        "tooltip": [
+          {
+            "field": "CLUE small area",
+            "title": "Suburb"
+          },
+          {
+            "aggregate": "sum",
+            "field": "Number of seats",
+            "title": "Seats"
+          }
+        ]
+      }
     },
-    "color": {
-      "field": "Seating type",
-      "type": "nominal"
+
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 95,
+        "outerRadius": 150
+      },
+
+      "encoding": {
+        "theta": {
+          "aggregate": "sum",
+          "field": "Number of seats"
+        },
+
+        "color": {
+          "field": "Seating type",
+          "type": "nominal",
+          "title": "Seating Type"
+        },
+
+        "tooltip": [
+          {
+            "field": "CLUE small area",
+            "title": "Suburb"
+          },
+          {
+            "field": "Seating type",
+            "title": "Type"
+          },
+          {
+            "aggregate": "sum",
+            "field": "Number of seats",
+            "title": "Seats"
+          }
+        ]
+      }
     }
-  }
+  ]
 }
