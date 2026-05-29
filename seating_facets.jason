@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "cafes_data.csv"},
+  "data": {"url": "cafes-and-restaurants-with-seating-capacity.csv"},
   "title": "Seating Configurations Across Melbourne Neighborhoods",
   "facet": {
     "field": "clue_small_area",
