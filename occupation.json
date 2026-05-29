@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "data": {
+    "url": "Occupation-Table 1.csv"
+  },
+
+  "transform": [
+    {
+      "fold": [
+        "Professionals",
+        "Managers",
+        "Clerical/Admin",
+        "Community/Personal Service",
+        "Technicians/Trades",
+        "Sales",
+        "Labourers"
+      ],
+
+      "as": ["Occupation", "Percentage"]
+    }
+  ],
+
+  "mark": "bar",
+
+  "width": 800,
+  "height": 400,
+
+  "title": "Occupational Composition Across Melbourne Postcodes",
+
+  "encoding": {
+
+    "x": {
+      "field": "Postcode",
+      "type": "nominal"
+    },
+
+    "y": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "stack": "normalize"
+    },
+
+    "color": {
+      "field": "Occupation",
+      "type": "nominal"
+    }
+  }
+}

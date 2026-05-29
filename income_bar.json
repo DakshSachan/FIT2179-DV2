@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "data": {
+    "url": "Income-Table 1.csv"
+  },
+
+  "width": 700,
+  "height": 350,
+
+  "title": "Median Household Income by Melbourne Postcode",
+
+  "mark": {
+    "type": "bar",
+    "color": "#8B5E3C"
+  },
+
+  "encoding": {
+
+    "y": {
+      "field": "Postcode",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "Postcode"
+    },
+
+    "x": {
+      "field": "Household Weekly Income",
+      "type": "quantitative",
+      "title": "Median Household Weekly Income ($)"
+    },
+
+    "tooltip": [
+      {"field": "Postcode"},
+      {"field": "Household Weekly Income"}
+    ]
+  }
+}
