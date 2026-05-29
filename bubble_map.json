@@ -1,1 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 950,
+  "height": 550,
+  "title": {
+    "text": "Geographic Distribution of Melbourne Cafés",
+    "fontSize": 16,
+    "font": "sans-serif"
+  },
+  "projection": {
+    "type": "mercator",
+    "center": [144.9631, -37.8136],
+    "scale": 200000
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "small-areas-for-census-of-land-use-and-employment-clue.geojson",
+        "format": {"type": "json", "property": "features"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#fcfaf2",
+        "stroke": "#cbcac4",
+        "strokeWidth": 1.2
+      }
+    },
+    {
+      "data": {
+        "url": "cafes-and-restaurants-with-seating-capacity.csv"
+      },
+"mark": {
+  "type": "circle",
+  "opacity": 0.65,
+  "color": "#6F4E37"
+},
+"encoding": {
+  "longitude": {"field": "Longitude"},
+  "latitude": {"field": "Latitude"},
 
+  "size": {
+    "field": "Number of seats",
+    "type": "quantitative",
+    "title": "Number of Seats"
+  },
+
+  "tooltip": [
+    {"field": "Trading name", "title": "Cafe"},
+    {"field": "CLUE small area", "title": "Suburb"},
+    {"field": "Number of seats", "title": "Seats"}
+  ]
+}
+    }
+  ]
+}
