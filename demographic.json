@@ -1,34 +1,34 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "ABS Census Demographic Context by Suburb",
+  "title": "ABS Census Demographic Context by Postcode",
   "vconcat": [
     {
-      "title": "Economic Profile: Median Weekly Household Income",
-      "data": {"url": "income.csv"},
+      "title": "Economic Profile: Household Weekly Income",
+      "data": {"url": "Income-Table 1.csv"},
       "width": 550,
       "height": 180,
       "mark": {"type": "bar", "color": "#6F4E37", "cornerRadiusEnd": 4},
       "encoding": {
-        "x": {"field": "Geography", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Suburb"},
-        "y": {"field": "Median weekly total household income ($)", "type": "quantitative", "title": "Income ($)"},
+        "x": {"field": "Postcode", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Postcode"},
+        "y": {"field": "Household Weekly Income", "type": "quantitative", "title": "Income ($/week)"},
         "tooltip": [
-          {"field": "Geography", "type": "nominal", "title": "Suburb"},
-          {"field": "Median weekly total household income ($)", "type": "quantitative", "title": "Income"}
+          {"field": "Postcode", "type": "nominal", "title": "Postcode"},
+          {"field": "Household Weekly Income", "type": "quantitative", "title": "Weekly Household Income"}
         ]
       }
     },
     {
-      "title": "Employment Profile: Accommodation & Food Service Workers",
-      "data": {"url": "industry.csv"},
+      "title": "Social Profile: Professionals Distribution (%)",
+      "data": {"url": "Occupation-Table 1.csv"},
       "width": 550,
       "height": 180,
       "mark": {"type": "bar", "color": "#C19A6B", "cornerRadiusEnd": 4},
       "encoding": {
-        "x": {"field": "Geography", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Suburb"},
-        "y": {"field": "Accommodation and food services", "type": "quantitative", "title": "Number of Workers"},
+        "x": {"field": "Postcode", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Postcode"},
+        "y": {"field": "Professionals", "type": "quantitative", "title": "% of White-Collar Professionals"},
         "tooltip": [
-          {"field": "Geography", "type": "nominal", "title": "Suburb"},
-          {"field": "Accommodation and food services", "type": "quantitative", "title": "Workers"}
+          {"field": "Postcode", "type": "nominal", "title": "Postcode"},
+          {"field": "Professionals", "type": "quantitative", "title": "Professionals %"}
         ]
       }
     }
