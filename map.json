@@ -36,8 +36,8 @@
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "tooltip": [
-          {"field": "trading_name", "type": "nominal", "title": "Café Name"},
-          {"field": "clue_small_area", "type": "nominal", "title": "Area"}
+          {"field": "Trading name", "type": "nominal", "title": "Café Name"},
+          {"field": "CLUE small area", "type": "nominal", "title": "Area"}
         ]
       }
     }
