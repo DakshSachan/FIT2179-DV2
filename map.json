@@ -31,8 +31,8 @@
       },
       "mark": {
         "type": "circle", 
-        "opacity": 0.75, 
-        "size": 45, 
+        "opacity": 0.6, 
+        "size": 60, 
         "color": "#6F4E37",
         "cursor": "pointer"
       },
