@@ -1,20 +1,20 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
-  "height": 400,
+  "width": 700,
+  "height": 450,
   "title": "Geographic Distribution of Melbourne Cafés",
   "layer": [
     {
       "data": {
-        "url": "clue_map.geojson",
+        "url": "small-areas-for-census-of-land-use-and-employment-clue.geojson",
         "format": {"type": "json", "property": "features"}
       },
       "projection": {"type": "mercator"},
       "mark": {
         "type": "geoshape",
-        "fill": "#f9f6f0",
-        "stroke": "#d4d4d1",
-        "strokeWidth": 1
+        "fill": "#fcfaf2",
+        "stroke": "#cbcac4",
+        "strokeWidth": 1.2
       }
     },
     {
@@ -22,26 +22,19 @@
         "url": "cafes_data.csv"
       },
       "projection": {"type": "mercator"},
-      "mark": {"type": "circle", "opacity": 0.7, "cursor": "pointer"},
+      "mark": {
+        "type": "circle", 
+        "opacity": 0.75, 
+        "size": 40, 
+        "color": "#6F4E37",
+        "cursor": "pointer"
+      },
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
-        "size": {
-          "field": "total_number_of_seats",
-          "type": "quantitative",
-          "title": "Total Seats",
-          "scale": {"range": [10, 300]}
-        },
-        "color": {
-          "field": "clue_small_area",
-          "type": "nominal",
-          "title": "Area",
-          "scale": {"scheme": "tableau10"}
-        },
         "tooltip": [
           {"field": "trading_name", "type": "nominal", "title": "Café Name"},
-          {"field": "clue_small_area", "type": "nominal", "title": "Area"},
-          {"field": "total_number_of_seats", "type": "quantitative", "title": "Seats"}
+          {"field": "clue_small_area", "type": "nominal", "title": "Area"}
         ]
       }
     }
