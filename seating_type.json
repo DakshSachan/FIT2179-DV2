@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "cafes-and-restaurants-with-seating-capacity.csv"},
+  "mark": {"type": "arc"},
+  "encoding": {
+    "theta": {
+      "aggregate": "sum",
+      "field": "Number of seats"
+    },
+    "color": {
+      "field": "Seating type",
+      "type": "nominal"
+    }
+  }
+}
