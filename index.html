@@ -84,15 +84,20 @@ seating configurations.
 
 <div id="facet_grid" class="chart-box"></div>
 
-<h3>Seating Capacity Composition</h3>
+<h2>4. Seating Capacity Composition</h2>
 
 <p>
-This nested donut chart shows how Melbourne's total seating capacity is
-distributed across suburbs and how that capacity is divided between
-different seating types.
+This section explores how Melbourne's total seating capacity is distributed
+across suburbs and how those seats are divided between indoor and outdoor spaces.
 </p>
 
-<div id="sunburst_chart" class="chart-box"></div>
+<div style="display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap;">
+
+  <div id="seating_donut" class="chart-box" style="flex:1; min-width:500px;"></div>
+
+  <div id="indoor_outdoor" class="chart-box" style="flex:1; min-width:500px;"></div>
+
+</div>
 <h3>Largest Hospitality Venues</h3>
 
 <p>
@@ -147,7 +152,9 @@ vegaEmbed('#seating_type', 'seating_type.json?v=1', {"actions": false}).catch(co
 
 vegaEmbed('#income_chart', 'income_bar.json?v=1', {"actions": false}).catch(console.error);
 
-vegaEmbed('#sunburst_chart', 'seating_sunburst.json?v=1', {"actions": false}).catch(console.error);
+vegaEmbed('#seating_donut', 'seating_donut.json?v=1', {"actions": false}).catch(console.error);
+
+vegaEmbed('#indoor_outdoor', 'indoor_outdoor.json?v=1', {"actions": false}).catch(console.error);
 </script>
 
 </body>
