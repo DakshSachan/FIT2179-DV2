@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "cafes_data.csv"},
+  "title": "Analysis of Seating Variables",
+  "repeat": {
+    "row": ["number_of_indoor_seats", "number_of_outdoor_seats", "total_number_of_seats"]
+  },
+  "spec": {
+    "width": 600,
+    "height": 130,
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": {"repeat": "row"}, "type": "quantitative", "bin": true, "title": "Seat Count Ranges"},
+      "y": {"aggregate": "count", "type": "quantitative", "title": "Number of Establishments"},
+      "color": {"field": "clue_small_area", "type": "nominal", "scale": {"scheme": "category10"}}
+    }
+  }
+}
