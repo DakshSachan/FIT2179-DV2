@@ -1,35 +1,26 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 300,
-  "title": "Total Café Establishments by Neighborhood",
-  "data": {
-    "values": [
-      {"neighborhood": "Melbourne (CBD)", "cafes": 450},
-      {"neighborhood": "Carlton", "cafes": 180},
-      {"neighborhood": "Southbank", "cafes": 140},
-      {"neighborhood": "Docklands", "cafes": 120},
-      {"neighborhood": "North Melbourne", "cafes": 95},
-      {"neighborhood": "East Melbourne", "cafes": 40},
-      {"neighborhood": "West Melbourne", "cafes": 35}
-    ]
-  },
-  "mark": {"type": "bar", "color": "#a0522d"},
+  "data": {"url": "cafes-and-restaurants-with-seating-capacity.csv"},
+  "width": 950,
+  "height": 400,
+  "title": "Total Seating Capacities Across Commercial Suburbs",
+  "mark": {"type": "bar", "color": "#6F4E37", "cornerRadiusEnd": 4},
   "encoding": {
     "x": {
-      "field": "neighborhood",
+      "field": "CLUE small area",
       "type": "nominal",
-      "title": "Neighborhood Area",
-      "axis": {"labelAngle": -30}
+      "axis": {"labelAngle": -30},
+      "title": "Suburbs"
     },
     "y": {
-      "field": "cafes",
+      "field": "Number of seats",
       "type": "quantitative",
-      "title": "Number of Cafés"
+      "aggregate": "sum",
+      "title": "Total Seating Capacity"
     },
     "tooltip": [
-      {"field": "neighborhood", "type": "nominal", "title": "Area"},
-      {"field": "cafes", "type": "quantitative", "title": "Total Cafés"}
+      {"field": "CLUE small area", "type": "nominal", "title": "Suburb"},
+      {"field": "Number of seats", "type": "quantitative", "aggregate": "sum", "title": "Total Seats"}
     ]
   }
 }
