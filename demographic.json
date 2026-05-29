@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "ABS Census Demographic Context by Suburb",
+  "vconcat": [
+    {
+      "title": "Economic Profile: Median Weekly Household Income",
+      "data": {"url": "income.csv"},
+      "width": 550,
+      "height": 180,
+      "mark": {"type": "bar", "color": "#6F4E37", "cornerRadiusEnd": 4},
+      "encoding": {
+        "x": {"field": "Geography", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Suburb"},
+        "y": {"field": "Median weekly total household income ($)", "type": "quantitative", "title": "Income ($)"},
+        "tooltip": [
+          {"field": "Geography", "type": "nominal", "title": "Suburb"},
+          {"field": "Median weekly total household income ($)", "type": "quantitative", "title": "Income"}
+        ]
+      }
+    },
+    {
+      "title": "Employment Profile: Accommodation & Food Service Workers",
+      "data": {"url": "industry.csv"},
+      "width": 550,
+      "height": 180,
+      "mark": {"type": "bar", "color": "#C19A6B", "cornerRadiusEnd": 4},
+      "encoding": {
+        "x": {"field": "Geography", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Suburb"},
+        "y": {"field": "Accommodation and food services", "type": "quantitative", "title": "Number of Workers"},
+        "tooltip": [
+          {"field": "Geography", "type": "nominal", "title": "Suburb"},
+          {"field": "Accommodation and food services", "type": "quantitative", "title": "Workers"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "axis": {"labelFont": "sans-serif", "titleFont": "sans-serif"},
+    "title": {"font": "sans-serif", "fontSize": 14}
+  }
+}
