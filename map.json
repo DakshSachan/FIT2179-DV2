@@ -3,13 +3,17 @@
   "width": 700,
   "height": 450,
   "title": "Geographic Distribution of Melbourne Cafés",
+  "projection": {
+    "type": "mercator",
+    "center": [144.9631, -37.8136],
+    "scale": 110000
+  },
   "layer": [
     {
       "data": {
         "url": "small-areas-for-census-of-land-use-and-employment-clue.geojson",
         "format": {"type": "json", "property": "features"}
       },
-      "projection": {"type": "mercator"},
       "mark": {
         "type": "geoshape",
         "fill": "#fcfaf2",
@@ -21,7 +25,6 @@
       "data": {
         "url": "cafes-and-restaurants-with-seating-capacity.csv"
       },
-      "projection": {"type": "mercator"},
       "mark": {
         "type": "circle", 
         "opacity": 0.75, 
