@@ -4,31 +4,37 @@
     "url": "cafes-and-restaurants-with-seating-capacity.csv",
     "format": {"maxrows": 50000}
   },
-  "title": "Seating Density Profile Across Key Areas",
+  "title": "Seating Capacity Distributions Across Suburbs",
   "width": 800,
-  "height": 300,
+  "height": 350,
   "transform": [
     {"filter": "datum['Number of seats'] > 0 && datum['Number of seats'] <= 300"}
   ],
-  "mark": {"type": "area", "opacity": 0.4, "interpolate": "monotone"},
+  "mark": {
+    "type": "boxplot",
+    "extent": "min-max",
+    "size": 30,
+    "ticks": true
+  },
   "encoding": {
     "x": {
-      "field": "Number of seats",
-      "type": "quantitative",
-      "title": "Seat Capacity (Venues capped at 300 seats)"
+      "field": "CLUE small area",
+      "type": "nominal",
+      "title": "Melbourne Suburb Area",
+      "axis": {"labelAngle": -20}
     },
     "y": {
-      "aggregate": "count",
+      "field": "Number of seats",
       "type": "quantitative",
-      "title": "Density of Establishments Plot"
+      "title": "Number of Seats per Venue"
     },
     "color": {
       "field": "CLUE small area",
       "type": "nominal",
-      "title": "Melbourne Suburb Area",
+      "legend": null,
       "scale": {
         "domain": ["Melbourne (CBD)", "Carlton", "Docklands", "North Melbourne", "Southbank", "West Melbourne (Residential)"],
-        "range": ["#4A2E1B", "#6F4E37", "#A67B5B", "#C19A6B", "#D2B48C", "#E8D8C8"]
+        "range": ["#4A2E1B", "#6F4E37", "#A67B5B", "#C19A6B", "#D2B48C", "#E1D3C1"]
       }
     }
   }
