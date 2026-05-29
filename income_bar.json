@@ -11,28 +11,38 @@
   "title": "Median Household Income by Melbourne Postcode",
 
   "mark": {
-    "type": "bar",
-    "color": "#8B5E3C"
+    "type": "line",
+    "point": {
+      "filled": true,
+      "size": 80
+    },
+    "strokeWidth": 3,
+    "color": "#6F4E37"
   },
 
   "encoding": {
 
-    "y": {
+    "x": {
       "field": "Postcode",
-      "type": "nominal",
-      "sort": "-x",
+      "type": "ordinal",
       "title": "Postcode"
     },
 
-    "x": {
+    "y": {
       "field": "Household Weekly Income",
       "type": "quantitative",
       "title": "Median Household Weekly Income ($)"
     },
 
     "tooltip": [
-      {"field": "Postcode"},
-      {"field": "Household Weekly Income"}
+      {
+        "field": "Postcode",
+        "title": "Postcode"
+      },
+      {
+        "field": "Household Weekly Income",
+        "title": "Household Income ($)"
+      }
     ]
   }
 }
