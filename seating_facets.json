@@ -1,34 +1,39 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "cafes-and-restaurants-with-seating-capacity.csv"},
-  "title": "Seating Capacities and Types Across Melbourne Neighborhoods",
-  "facet": {
-    "field": "CLUE small area",
-    "type": "nominal",
-    "columns": 3,
-    "title": "Suburbs"
-  },
-  "spec": {
-    "width": 320,
-    "height": 160,
-    "mark": {"type": "bar", "color": "#8B5A2B"},
-    "encoding": {
-      "x": {
-        "field": "Seating type",
-        "type": "nominal",
-        "title": "Type"
-      },
-      "y": {
-        "field": "Number of seats",
-        "type": "quantitative",
-        "aggregate": "sum",
-        "title": "Total Capacity"
-      },
-      "tooltip": [
-        {"field": "CLUE small area", "type": "nominal", "title": "Area"},
-        {"field": "Seating type", "type": "nominal", "title": "Type"},
-        {"field": "Number of seats", "type": "quantitative", "aggregate": "sum", "title": "Total Seats"}
-      ]
-    }
+  "title": "Seating Space Allocation by Melbourne Suburb Area",
+  "width": 550,
+  "height": 450,
+  "mark": {"type": "bar", "cornerRadiusEnd": 3},
+  "encoding": {
+    "y": {
+      "field": "CLUE small area",
+      "type": "nominal",
+      "title": "Melbourne Suburb Area",
+      "sort": "-x"
+    },
+    "x": {
+      "field": "Number of seats",
+      "type": "quantitative",
+      "aggregate": "sum",
+      "title": "Cumulative Seating Capacity"
+    },
+    "yOffset": {
+      "field": "Seating type"
+    },
+    "color": {
+      "field": "Seating type",
+      "type": "nominal",
+      "title": "Space Allocation",
+      "scale": {
+        "domain": ["Seats - Indoor", "Seats - Outdoor"],
+        "range": ["#5C3A21", "#C19A6B"]
+      }
+    },
+    "tooltip": [
+      {"field": "CLUE small area", "type": "nominal", "title": "Suburb"},
+      {"field": "Seating type", "type": "nominal", "title": "Type"},
+      {"field": "Number of seats", "type": "quantitative", "aggregate": "sum", "title": "Total Seats"}
+    ]
   }
 }
