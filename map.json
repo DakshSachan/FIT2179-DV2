@@ -32,8 +32,8 @@
       },
       "mark": {
         "type": "circle", 
-        "opacity": 0.75, 
-        "size": 45, 
+        "opacity": 0.8, 
+        "size": 50, 
         "color": "#6F4E37",
         "cursor": "pointer"
       },
@@ -41,10 +41,10 @@
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "tooltip": [
-          {"field": "Trading name", "type": "nominal", "title": "Café Name"},
-          {"field": "CLUE small area", "type": "nominal", "title": "Area"},
-          {"field": "Seating type", "type": "nominal", "title": "Type"},
-          {"field": "Number of seats", "type": "quantitative", "title": "Seats"}
+          {"field": "Trading name", "type": "nominal"},
+          {"field": "CLUE small area", "type": "nominal"},
+          {"field": "Seating type", "type": "nominal"},
+          {"field": "Number of seats", "type": "quantitative"}
         ]
       }
     }
