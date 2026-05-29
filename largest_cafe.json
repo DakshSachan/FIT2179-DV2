@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "cafes-and-restaurants-with-seating-capacity.csv"},
+  "transform": [
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "Number of seats", "order": "descending"}]
+    },
+    {"filter": "datum.rank <= 10"}
+  ],
+  "mark": {"type": "bar", "color": "#6F4E37"},
+  "width": 700,
+  "height": 350,
+  "encoding": {
+    "y": {
+      "field": "Trading name",
+      "type": "nominal",
+      "sort": "-x"
+    },
+    "x": {
+      "field": "Number of seats",
+      "type": "quantitative"
+    }
+  }
+}
