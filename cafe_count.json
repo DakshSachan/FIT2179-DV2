@@ -8,7 +8,7 @@
   "width": 700,
   "height": 350,
 
-  "title": "Number of Cafés by Suburb",
+  "title": "Number of Café Records by Suburb",
 
   "mark": {
     "type": "bar",
@@ -16,7 +16,6 @@
   },
 
   "encoding": {
-
     "y": {
       "field": "CLUE small area",
       "type": "nominal",
@@ -25,19 +24,20 @@
     },
 
     "x": {
-  "aggregate": "distinct",
-  "field": "Trading name",
-  "type": "quantitative",
-  "title": "Number of Cafés"
-  }
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Number of Records"
+    },
 
     "tooltip": [
-  {"field": "CLUE small area", "title": "Suburb"},
-  {
-    "aggregate": "distinct",
-    "field": "Trading name",
-    "title": "Number of Cafés"
-  }
-]
+      {
+        "field": "CLUE small area",
+        "title": "Suburb"
+      },
+      {
+        "aggregate": "count",
+        "title": "Records"
+      }
+    ]
   }
 }
