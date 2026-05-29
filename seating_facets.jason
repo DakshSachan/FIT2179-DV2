@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "cafes_data.csv"},
+  "title": "Seating Configurations Across Melbourne Neighborhoods",
+  "facet": {
+    "field": "clue_small_area",
+    "type": "nominal",
+    "columns": 3,
+    "title": "CLUE Small Area"
+  },
+  "spec": {
+    "width": 200,
+    "height": 150,
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "field": "number_of_indoor_seats",
+        "type": "quantitative",
+        "title": "Indoor Seats"
+      },
+      "y": {
+        "field": "number_of_outdoor_seats",
+        "type": "quantitative",
+        "title": "Outdoor Seats"
+      },
+      "color": {"field": "industry_sub_class_description", "type": "nominal", "title": "Type"},
+      "tooltip": [{"field": "trading_name", "type": "nominal"}]
+    }
+  }
+}
