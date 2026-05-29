@@ -1,41 +1,18 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 350,
-  "title": "Seating Strategies: Indoor vs. Outdoor Capacity",
-  "data": {
-    "values": [
-      {"name": "Patricia Coffee Brewers", "indoor": 12, "outdoor": 8, "area": "Melbourne (CBD)"},
-      {"name": "Brother Baba Budan", "indoor": 25, "outdoor": 4, "area": "Melbourne (CBD)"},
-      {"name": "Seven Seeds Coffee", "indoor": 80, "outdoor": 15, "area": "Carlton"},
-      {"name": "Brunetti Classico", "indoor": 150, "outdoor": 60, "area": "Carlton"},
-      {"name": "Auction Rooms", "indoor": 65, "outdoor": 20, "area": "North Melbourne"},
-      {"name": "The Code Black", "indoor": 45, "outdoor": 10, "area": "North Melbourne"},
-      {"name": "Operator 25", "indoor": 35, "outdoor": 6, "area": "Melbourne (CBD)"},
-      {"name": "St Ali Coffee Roasters", "indoor": 90, "outdoor": 30, "area": "Southbank"}
-    ]
-  },
-  "mark": {"type": "point", "filled": true, "size": 100},
+  "data": {"url": "cafes-and-restaurants-with-seating-capacity.csv"},
+  "width": 950,
+  "height": 400,
+  "title": "Establishment Densities by Block Coordinates",
+  "mark": {"type": "point", "filled": true, "size": 60, "opacity": 0.6, "color": "#C19A6B"},
   "encoding": {
-    "x": {
-      "field": "indoor",
-      "type": "quantitative",
-      "title": "Indoor Seats Capacity"
-    },
-    "y": {
-      "field": "outdoor",
-      "type": "quantitative",
-      "title": "Outdoor Seats Capacity"
-    },
-    "color": {
-      "field": "area",
-      "type": "nominal",
-      "title": "Neighborhood"
-    },
+    "x": {"field": "Block ID", "type": "quantitative", "title": "City Block Reference Identifier"},
+    "y": {"field": "Number of seats", "type": "quantitative", "title": "Seats per Venue"},
+    "color": {"field": "Seating type", "type": "nominal", "title": "Seating Type"},
     "tooltip": [
-      {"field": "name", "type": "nominal", "title": "Café Name"},
-      {"field": "indoor", "type": "quantitative", "title": "Indoor Seats"},
-      {"field": "outdoor", "type": "quantitative", "title": "Outdoor Seats"}
+      {"field": "Trading name", "type": "nominal", "title": "Venue"},
+      {"field": "Block ID", "type": "quantitative", "title": "Block"},
+      {"field": "Number of seats", "type": "quantitative", "title": "Seats"}
     ]
   }
 }
