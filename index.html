@@ -41,50 +41,73 @@
 
 <div class="container">
 
-  <h1>Melbourne's Café Culture Dashboard</h1>
-  <p style="text-align: center; font-style: italic;">An analysis of geographic density, spatial configurations, and demographic context.</p>
+<h2>1. Geographic Cluster Exploration</h2>
+  <h1>Brewing Melbourne: Mapping the City's Café Culture</h1>
+  <p style="text-align:center; font-style:italic;">  Exploring the geography, seating capacity and demographic context of Melbourne's café landscape.</p>
 
-  <h2>1. Geographic Cluster Exploration</h2>
-  <p>This interactive map visualizes the geographic layout of establishments across Melbourne. Hover over clusters to identify local venues and their spatial concentration.</p>
-  <div id="map" class="chart-box"></div>
+<p>
+This interactive map visualizes the geographic layout of establishments
+across Melbourne. Hover over locations to identify venues and their
+spatial concentration.
+</p>
 
-  <h2>2. Melbourne's Café Hotspots</h2>
-  <p>While cafés are distributed throughout Melbourne, some suburbs contain significantly larger seating capacities than others. This chart highlights the key hospitality hubs across the city.</p>
-  <div id="bar_chart" class="chart-box"></div>
+<div id="map" class="chart-box"></div>
 
-  <div id="scatter_plot" class="chart-box"></div>
+<h3>Venue Size Distribution Across Melbourne</h3>
 
-  <h2>3. High-Density Suburb Micro-Analysis</h2>
-  <p>Breaking layouts down into small multiples reveals unique structural signatures for individual neighborhoods, mapping indoor vs outdoor spaces.</p>
-  <div id="facet_grid" class="chart-box"></div>
+<p>
+While café locations reveal clustering patterns, seating capacity
+highlights where Melbourne's largest hospitality venues are concentrated.
+</p>
+
+<div id="bubble_map" class="chart-box"></div>
+
+<h2>2. Melbourne's Café Hotspots</h2>
+
+<p>
+Some suburbs contain substantially more cafés and seating capacity than
+others. These hospitality hubs play a major role in Melbourne's café
+culture.
+</p>
+
+<div id="cafe_count_chart" class="chart-box"></div>
+
+<div id="bar_chart" class="chart-box"></div>
+
+<h2>3. High-Density Suburb Micro-Analysis</h2>
+
+<p>
+Breaking layouts down into small multiples reveals unique structural
+signatures for individual neighbourhoods, mapping indoor versus outdoor
+seating configurations.
+</p>
+
+<div id="facet_grid" class="chart-box"></div>
 
   <h2>4. Macro Seating Variables Distribution</h2>
   <p>This repeated series shows the mathematical distribution model across variables to observe industry thresholds for seating scale attributes.</p>
   <div id="repeat_stack" class="chart-box"></div>
 
   <h2>5. ABS Census Demographic Context</h2>
-
-<p>
-By connecting café locations with demographic indicators,
-we can explore whether wealthier and professionally
-oriented areas support larger hospitality sectors.
-</p>
-
+  <p>By connecting café locations with demographic indicators, we can explore whether wealthier and professionally oriented areas support larger hospitality sectors.</p>
 <div id="income_chart" class="chart-box"></div>
 
-<div id="occupation_chart" class="chart-box"></div>
-
-<div id="industry_chart" class="chart-box"></div>
 </div>
 
 <script type="text/javascript">
-  vegaEmbed('#map', 'map.json?v=5', {"actions": false}).catch(console.error);
-  vegaEmbed('#bar_chart', 'bar.json?v=5', {"actions": false}).catch(console.error);
-  vegaEmbed('#facet_grid', 'seating_facets.json?v=5', {"actions": false}).catch(console.error);
-  vegaEmbed('#repeat_stack', 'trends_repeat.json?v=5', {"actions": false}).catch(console.error);
-  vegaEmbed('#income_chart', 'income_bar.json?v=1', {"actions": false}).catch(console.error);
-  vegaEmbed('#occupation_chart', 'occupation.json?v=1', {"actions": false}).catch(console.error);
-  vegaEmbed('#industry_chart', 'industry.json?v=1', {"actions": false}).catch(console.error);
+vegaEmbed('#map', 'map.json?v=5', {"actions": false}).catch(console.error);
+
+vegaEmbed('#bubble_map', 'bubble_map.json?v=1', {"actions": false}).catch(console.error);
+
+vegaEmbed('#cafe_count_chart', 'cafe_count.json?v=1', {"actions": false}).catch(console.error);
+
+vegaEmbed('#bar_chart', 'bar.json?v=5', {"actions": false}).catch(console.error);
+
+vegaEmbed('#facet_grid', 'seating_facets.json?v=5', {"actions": false}).catch(console.error);
+
+vegaEmbed('#repeat_stack', 'trends_repeat.json?v=5', {"actions": false}).catch(console.error);
+
+vegaEmbed('#income_chart', 'income_bar.json?v=1', {"actions": false}).catch(console.error);
 </script>
 
 </body>
