@@ -9,14 +9,14 @@
     "title": "Suburbs"
   },
   "spec": {
-    "width": 180,
-    "height": 130,
-    "mark": {"type": "bar", "color": "#6F4E37"},
+    "width": 260,
+    "height": 150,
+    "mark": {"type": "bar", "color": "#8B5A2B"},
     "encoding": {
       "x": {
         "field": "Seating type",
         "type": "nominal",
-        "title": "Seating Type"
+        "title": "Type"
       },
       "y": {
         "field": "Number of seats",
@@ -25,8 +25,8 @@
         "title": "Total Capacity"
       },
       "tooltip": [
-        {"field": "CLUE small area", "type": "nominal"},
-        {"field": "Seating type", "type": "nominal"},
+        {"field": "CLUE small area", "type": "nominal", "title": "Area"},
+        {"field": "Seating type", "type": "nominal", "title": "Type"},
         {"field": "Number of seats", "type": "quantitative", "aggregate": "sum", "title": "Total Seats"}
       ]
     }
