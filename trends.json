@@ -1,18 +1,27 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "cafes-and-restaurants-with-seating-capacity.csv"},
-  "title": "Analysis of Seating Variables",
-  "repeat": {
-    "row": ["number_of_indoor_seats", "number_of_outdoor_seats", "total_number_of_seats"]
-  },
-  "spec": {
-    "width": 600,
-    "height": 130,
-    "mark": "bar",
-    "encoding": {
-      "x": {"field": {"repeat": "row"}, "type": "quantitative", "bin": true, "title": "Seat Count Ranges"},
-      "y": {"aggregate": "count", "type": "quantitative", "title": "Number of Establishments"},
-      "color": {"field": "clue_small_area", "type": "nominal", "scale": {"scheme": "category10"}}
+  "title": "Distribution Profile of Seat Densities",
+  "width": 650,
+  "height": 250,
+  "mark": {"type": "bar", "color": "#C19A6B"},
+  "encoding": {
+    "x": {
+      "field": "Number of seats", 
+      "type": "quantitative", 
+      "bin": {"maxbins": 30}, 
+      "title": "Number of Seats per Venue"
+    },
+    "y": {
+      "aggregate": "count", 
+      "type": "quantitative", 
+      "title": "Number of Establishments"
+    },
+    "color": {
+      "field": "CLUE small area", 
+      "type": "nominal", 
+      "title": "Area",
+      "scale": {"scheme": "tableau10"}
     }
   }
 }
