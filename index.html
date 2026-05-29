@@ -48,9 +48,6 @@
   <p>This interactive map visualizes the geographic layout of establishments across Melbourne. Hover over clusters to identify local venues and their spatial concentration.</p>
   <div id="map" class="chart-box"></div>
 
-  <h2>2. Baseline Seating & Distribution Profiles</h2>
-  <p>Our initial metrics highlight structural capacities across commercial precincts, charting establishment scales against localized city grids.</p>
-  <div id="bar_chart" class="chart-box"></div>
   <div id="scatter_plot" class="chart-box"></div>
 
   <h2>3. High-Density Suburb Micro-Analysis</h2>
@@ -70,7 +67,6 @@
 <script type="text/javascript">
   vegaEmbed('#map', 'map.json?v=5', {"actions": false}).catch(console.error);
   vegaEmbed('#bar_chart', 'bar.json?v=5', {"actions": false}).catch(console.error);
-  vegaEmbed('#scatter_plot', 'scatter.json?v=5', {"actions": false}).catch(console.error);
   vegaEmbed('#facet_grid', 'seating_facets.json?v=5', {"actions": false}).catch(console.error);
   vegaEmbed('#repeat_stack', 'trends_repeat.json?v=5', {"actions": false}).catch(console.error);
   vegaEmbed('#demographics_section', 'demographics.json?v=5', {"actions": false}).catch(console.error);
