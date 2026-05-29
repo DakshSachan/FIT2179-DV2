@@ -25,13 +25,19 @@
     },
 
     "x": {
-      "aggregate": "count",
-      "title": "Number of Cafés"
-    },
+  "aggregate": "distinct",
+  "field": "Trading name",
+  "type": "quantitative",
+  "title": "Number of Cafés"
+  }
 
     "tooltip": [
-      {"field": "CLUE small area"},
-      {"aggregate": "count", "title": "Number of Cafés"}
-    ]
+  {"field": "CLUE small area", "title": "Suburb"},
+  {
+    "aggregate": "distinct",
+    "field": "Trading name",
+    "title": "Number of Cafés"
+  }
+]
   }
 }
