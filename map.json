@@ -1,12 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 700,
-  "height": 450,
-  "title": "Geographic Distribution of Melbourne Cafés",
+  "width": 800,
+  "height": 550,
+  "title": {
+    "text": "Geographic Distribution of Melbourne Cafés",
+    "fontSize": 16,
+    "font": "sans-serif",
+    "anchor": "start"
+  },
   "projection": {
     "type": "mercator",
     "center": [144.9631, -37.8136],
-    "scale": 120000
+    "scale": 170000
   },
   "layer": [
     {
@@ -28,7 +33,7 @@
       "mark": {
         "type": "circle", 
         "opacity": 0.75, 
-        "size": 40, 
+        "size": 45, 
         "color": "#6F4E37",
         "cursor": "pointer"
       },
@@ -37,7 +42,9 @@
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "tooltip": [
           {"field": "Trading name", "type": "nominal", "title": "Café Name"},
-          {"field": "CLUE small area", "type": "nominal", "title": "Area"}
+          {"field": "CLUE small area", "type": "nominal", "title": "Area"},
+          {"field": "Seating type", "type": "nominal", "title": "Type"},
+          {"field": "Number of seats", "type": "quantitative", "title": "Seats"}
         ]
       }
     }
