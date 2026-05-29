@@ -16,8 +16,12 @@
       "type": "quantitative"
     },
     "color": {
-      "field": "Seating type",
-      "type": "nominal"
-    }
+  "field": "Seating type",
+  "type": "nominal",
+  "scale": {
+    "range": ["#6F4E37", "#D2B48C"]
+  },
+  "title": "Seating Type"
+}
   }
 }
