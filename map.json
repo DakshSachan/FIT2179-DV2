@@ -19,7 +19,7 @@
     },
     {
       "data": {
-        "url": "cafes_data.csv"
+        "url": "cafes-and-restaurants-with-seating-capacity.csv"
       },
       "projection": {"type": "mercator"},
       "mark": {
