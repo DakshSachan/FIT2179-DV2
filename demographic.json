@@ -1,15 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "ABS Census Demographic Context by Postcode",
+  "title": "ABS Census Demographic Context by Region",
   "vconcat": [
     {
       "title": "Economic Profile: Household Weekly Income",
       "data": {"url": "Income-Table 1.csv"},
-      "width": 950,
+      "width": "container",
       "height": 200,
       "mark": {"type": "bar", "color": "#6F4E37", "cornerRadiusEnd": 4},
       "encoding": {
-        "x": {"field": "Postcode", "type": "nominal", "title": "Postcode"},
+        "x": {"field": "Postcode", "type": "nominal", "title": "Postcode Identifier"},
         "y": {"field": "Household Weekly Income", "type": "quantitative", "title": "Income ($/week)"},
         "tooltip": [
           {"field": "Postcode", "type": "nominal"},
@@ -20,11 +20,11 @@
     {
       "title": "Social Profile: Professionals Distribution (%)",
       "data": {"url": "Occupation-Table 1.csv"},
-      "width": 950,
+      "width": "container",
       "height": 200,
       "mark": {"type": "bar", "color": "#C19A6B", "cornerRadiusEnd": 4},
       "encoding": {
-        "x": {"field": "Postcode", "type": "nominal", "title": "Postcode"},
+        "x": {"field": "Postcode", "type": "nominal", "title": "Postcode Identifier"},
         "y": {"field": "Professionals", "type": "quantitative", "title": "% of White-Collar Professionals"},
         "tooltip": [
           {"field": "Postcode", "type": "nominal"},
