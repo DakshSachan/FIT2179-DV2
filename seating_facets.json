@@ -7,9 +7,9 @@
 
   "transform": [
     {
-      "filter": "datum['Census year'] == 2024"
+      "filter": "datum['Census year'] == 2022"
     }
-  ],
+  ]
 
   "title": "Seating Space Allocation by Melbourne Suburb Area (2024)",
 
