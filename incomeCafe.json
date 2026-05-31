@@ -4,6 +4,8 @@
   "data": {
     "url": "incomeCafe.csv"
   },
+  "width" : 650,
+  "height" : 450,
 
   "transform": [
     {
