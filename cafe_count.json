@@ -24,17 +24,20 @@
     },
 
     "x": {
-      "aggregate": "count",
+      "aggregate": "distinct",
+      "field": "Trading name",
       "type": "quantitative",
-      "title": "Number of Records"
-    },
+      "title": "Distinct Venues"
+    }
 
     "tooltip": [
+      {"field": "CLUE small area", "title": "Suburb"},
       {
-        "field": "CLUE small area",
-        "title": "Suburb"
-      },
-      {
+        "aggregate": "distinct",
+        "field": "Trading name",
+        "title": "Distinct Venues"
+      }
+    ]
         "aggregate": "count",
         "title": "Records"
       }
