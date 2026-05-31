@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 950,
+  "width": 750,
   "height": 550,
   "title": {
     "text": "Geographic Distribution of Melbourne Cafés",
