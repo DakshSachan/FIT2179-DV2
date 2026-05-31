@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": "Income versus Hospitality Activity",
+
+  "data": {
+    "url": "income_vs_cafes.csv"
+  },
+
+  "width": 650,
+  "height": 400,
+
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 250,
+    "color": "#6F4E37"
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "HouseholdIncome",
+      "type": "quantitative",
+      "title": "Median Household Weekly Income ($)"
+    },
+
+    "y": {
+      "field": "CafeCount",
+      "type": "quantitative",
+      "title": "Distinct Hospitality Venues"
+    },
+
+    "tooltip": [
+      {"field": "Suburb"},
+      {"field": "HouseholdIncome", "title": "Income"},
+      {"field": "CafeCount", "title": "Venue Count"}
+    ]
+  }
+}
