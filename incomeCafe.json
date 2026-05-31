@@ -16,13 +16,31 @@
     }
   ],
 
-  "mark": {
-    "type": "point",
-    "filled": true,
-    "size": 250,
-    "color": "#6F4E37"
+  "layer": [
+  {
+    "mark": {
+      "type": "point",
+      "filled": true,
+      "size": 250,
+      "color": "#6F4E37"
+    }
   },
-
+  {
+    "mark": {
+      "type": "text",
+      "dx": 10,
+      "dy": -10,
+      "fontSize": 11,
+      "color": "#4A2E1B"
+    },
+    "encoding": {
+      "text": {
+        "field": "Suburb"
+      }
+    }
+  }
+],
+  
   "encoding": {
     "x": {
       "field": "Income",
