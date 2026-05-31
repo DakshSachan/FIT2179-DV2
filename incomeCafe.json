@@ -23,13 +23,13 @@
       "field": "Household Weekly Income",
       "type": "quantitative",
       "title": "Median Household Weekly Income ($)"
-  },
+    },
 
     "y": {
       "field": "Cafe count",
       "type": "quantitative",
       "title": "Distinct Hospitality Venues"
-  }
+    },
 
     "tooltip": [
       {"field": "Suburb"},
