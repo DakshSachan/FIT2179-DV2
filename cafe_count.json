@@ -5,10 +5,16 @@
     "url": "cafes-and-restaurants-with-seating-capacity.csv"
   },
 
+  "transform": [
+    {
+      "filter": "datum['Census year'] == 2024"
+    }
+  ],
+
   "width": 700,
   "height": 350,
 
-  "title": "Number of Café Records by Suburb",
+  "title": "Number of Distinct Hospitality Venues by Suburb (2024)",
 
   "mark": {
     "type": "bar",
@@ -16,6 +22,7 @@
   },
 
   "encoding": {
+
     "y": {
       "field": "CLUE small area",
       "type": "nominal",
@@ -28,18 +35,17 @@
       "field": "Trading name",
       "type": "quantitative",
       "title": "Distinct Venues"
-    }
+    },
 
     "tooltip": [
-      {"field": "CLUE small area", "title": "Suburb"},
+      {
+        "field": "CLUE small area",
+        "title": "Suburb"
+      },
       {
         "aggregate": "distinct",
         "field": "Trading name",
         "title": "Distinct Venues"
-      }
-    ]
-        "aggregate": "count",
-        "title": "Records"
       }
     ]
   }
