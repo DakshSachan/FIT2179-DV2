@@ -1,84 +1,48 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "title": "Seating Capacity by Suburb and Seating Type",
+  "title": "Indoor and Outdoor Seating Distribution",
 
   "data": {
     "url": "cafes-and-restaurants-with-seating-capacity.csv"
   },
 
-  "view": {"stroke": null},
+  "mark": {
+    "type": "arc",
+    "innerRadius": 60
+  },
 
-  "layer": [
+  "width": 350,
+  "height": 350,
 
-    {
-      "mark": {
-        "type": "arc",
-        "innerRadius": 40,
-        "outerRadius": 90
-      },
+  "encoding": {
 
-      "encoding": {
-        "theta": {
-          "aggregate": "sum",
-          "field": "Number of seats"
-        },
+    "theta": {
+      "aggregate": "sum",
+      "field": "Number of seats",
+      "type": "quantitative"
+    },
 
-        "color": {
-          "field": "CLUE small area",
-          "type": "nominal",
-          "title": "Suburb"
-        },
-
-        "tooltip": [
-          {
-            "field": "CLUE small area",
-            "title": "Suburb"
-          },
-          {
-            "aggregate": "sum",
-            "field": "Number of seats",
-            "title": "Seats"
-          }
+    "color": {
+      "field": "Seating type",
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "#6F4E37",
+          "#D2B48C"
         ]
       }
     },
 
-    {
-      "mark": {
-        "type": "arc",
-        "innerRadius": 95,
-        "outerRadius": 150
+    "tooltip": [
+      {
+        "field": "Seating type"
       },
-
-      "encoding": {
-        "theta": {
-          "aggregate": "sum",
-          "field": "Number of seats"
-        },
-
-        "color": {
-          "field": "Seating type",
-          "type": "nominal",
-          "title": "Seating Type"
-        },
-
-        "tooltip": [
-          {
-            "field": "CLUE small area",
-            "title": "Suburb"
-          },
-          {
-            "field": "Seating type",
-            "title": "Type"
-          },
-          {
-            "aggregate": "sum",
-            "field": "Number of seats",
-            "title": "Seats"
-          }
-        ]
+      {
+        "aggregate": "sum",
+        "field": "Number of seats",
+        "title": "Total Seats"
       }
-    }
-  ]
+    ]
+  }
 }
