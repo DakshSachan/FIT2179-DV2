@@ -20,21 +20,21 @@
   "encoding": {
 
     "x": {
-      "field": "HouseholdIncome",
+      "field": "Household Weekly Income",
       "type": "quantitative",
       "title": "Median Household Weekly Income ($)"
-    },
+  },
 
     "y": {
-      "field": "CafeCount",
+      "field": "Cafe count",
       "type": "quantitative",
       "title": "Distinct Hospitality Venues"
-    },
+  }
 
     "tooltip": [
       {"field": "Suburb"},
-      {"field": "HouseholdIncome", "title": "Income"},
-      {"field": "CafeCount", "title": "Venue Count"}
+      {"field": "Household Weekly Income", "title": "Income"},
+      {"field": "Cafe count", "title": "Venue Count"}
     ]
   }
 }
