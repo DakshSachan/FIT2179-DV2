@@ -109,6 +109,15 @@ Melbourne's hospitality seating capacity.
 
 </div>
 
+  <h3>Indoor vs Outdoor Seating Distribution</h3>
+
+<p>
+Across Melbourne, indoor seating accounts for the majority of hospitality
+capacity, while outdoor seating plays a smaller but important role in the city's café culture.
+</p>
+
+<div id="seating_type_donut" class="chart-box"></div>
+
 
 
   <h2>5. ABS Census Demographic Context</h2>
@@ -148,7 +157,8 @@ vegaEmbed('#income_chart', 'income_bar.json?v=1', {"actions": false}).catch(cons
 vegaEmbed('#occupation_chart', 'occupation.json?v=1', {"actions": false}).catch(console.error);
 
 vegaEmbed('#industry_chart', 'industry.json?v=1', {"actions": false}).catch(console.error);
-
+  
+vegaEmbed('#seating_type_donut','seating_type.json?v=1',{"actions": false}).catch(console.error);
 </script>
 
 </body>
