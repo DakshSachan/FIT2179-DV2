@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": "Dominant Industry Across Melbourne Postcodes",
+
+  "data": {
+    "url": "Industry-Table 1.csv"
+  },
+
+  "width": 700,
+  "height": 120,
+
+  "mark": {
+    "type": "rect",
+    "stroke": "white"
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "Postcode",
+      "type": "nominal",
+      "title": "Postcode"
+    },
+
+    "y": {
+      "value": 1,
+      "axis": null
+    },
+
+    "color": {
+      "field": "Top Industry 1",
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "#4A2E1B",
+          "#6F4E37",
+          "#8B5E3C",
+          "#A67C52",
+          "#C19A6B",
+          "#D2B48C",
+          "#7B4F35",
+          "#B08968"
+        ]
+      }
+    },
+
+    "tooltip": [
+      {"field": "Postcode"},
+      {"field": "Top Industry 1"},
+      {"field": "%"}
+    ]
+  }
+}
