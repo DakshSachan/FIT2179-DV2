@@ -7,14 +7,14 @@
 
   "transform": [
     {
-      "filter": "datum['Census year'] == 2024"
+      "filter": "datum['Census year'] == 2022"
     }
   ],
 
   "width": 700,
   "height": 350,
 
-  "title": "Number of Distinct Hospitality Venues by Suburb (2024)",
+  "title": "Distinct Hospitality Venues by Suburb (2022)",
 
   "mark": {
     "type": "bar",
@@ -22,7 +22,6 @@
   },
 
   "encoding": {
-
     "y": {
       "field": "CLUE small area",
       "type": "nominal",
