@@ -14,9 +14,9 @@
         "Community/Personal Service",
         "Technicians/Trades",
         "Sales",
-        "Labourers"
+        "Labourers",
+        "Machinery Operators"
       ],
-
       "as": ["Occupation", "Percentage"]
     }
   ],
@@ -43,7 +43,31 @@
 
     "color": {
       "field": "Occupation",
-      "type": "nominal"
-    }
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "#4A2E1B",
+          "#6F4E37",
+          "#8B5E3C",
+          "#A67C52",
+          "#C19A6B",
+          "#D2B48C",
+          "#7B4F35",
+          "#B08968"
+        ]
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "Postcode"
+      },
+      {
+        "field": "Occupation"
+      },
+      {
+        "field": "Percentage"
+      }
+    ]
   }
 }
