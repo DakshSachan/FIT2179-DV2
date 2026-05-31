@@ -1,39 +1,79 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "cafes-and-restaurants-with-seating-capacity.csv"},
-  "title": "Seating Space Allocation by Melbourne Suburb Area",
+
+  "data": {
+    "url": "cafes-and-restaurants-with-seating-capacity.csv"
+  },
+
+  "transform": [
+    {
+      "filter": "datum['Census year'] == 2024"
+    }
+  ],
+
+  "title": "Seating Space Allocation by Melbourne Suburb Area (2024)",
+
   "width": 550,
   "height": 450,
-  "mark": {"type": "bar", "cornerRadiusEnd": 3},
+
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3
+  },
+
   "encoding": {
+
     "y": {
       "field": "CLUE small area",
       "type": "nominal",
       "title": "Melbourne Suburb Area",
       "sort": "-x"
     },
+
     "x": {
       "field": "Number of seats",
       "type": "quantitative",
       "aggregate": "sum",
       "title": "Cumulative Seating Capacity"
     },
+
     "yOffset": {
       "field": "Seating type"
     },
+
     "color": {
       "field": "Seating type",
       "type": "nominal",
       "title": "Space Allocation",
       "scale": {
-        "domain": ["Seats - Indoor", "Seats - Outdoor"],
-        "range": ["#5C3A21", "#C19A6B"]
+        "domain": [
+          "Seats - Indoor",
+          "Seats - Outdoor"
+        ],
+        "range": [
+          "#5C3A21",
+          "#C19A6B"
+        ]
       }
     },
+
     "tooltip": [
-      {"field": "CLUE small area", "type": "nominal", "title": "Suburb"},
-      {"field": "Seating type", "type": "nominal", "title": "Type"},
-      {"field": "Number of seats", "type": "quantitative", "aggregate": "sum", "title": "Total Seats"}
+      {
+        "field": "CLUE small area",
+        "type": "nominal",
+        "title": "Suburb"
+      },
+      {
+        "field": "Seating type",
+        "type": "nominal",
+        "title": "Type"
+      },
+      {
+        "field": "Number of seats",
+        "type": "quantitative",
+        "aggregate": "sum",
+        "title": "Total Seats"
+      }
     ]
   }
 }
