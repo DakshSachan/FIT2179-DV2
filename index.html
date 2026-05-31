@@ -72,25 +72,21 @@ This interactive map visualises the spatial distribution of hospitality venues a
 
   
 <h2>2. Melbourne's Café Hotspots</h2>
-<p>Some suburbs contain substantially more hospitality venues and seating capacity than others. These activity hubs play a major role in shaping Melbourne's café culture and hospitality landscape.</p>
+<p>Some suburbs contain substantially more hospitality venues than others. These activity hubs play a major role in shaping Melbourne's café culture and hospitality landscape.</p>
 <div class="chart-box">
 <div style="display:flex; justify-content:center; padding:0 40px;">
 <div id="cafe_count_chart"></div>
 </div>
 <p class="chart-insight">Melbourne CBD contains substantially more hospitality venues than any other suburb, reinforcing its role as the city's primary hospitality and tourism centre. Carlton, Docklands and Southbank also emerge as important hospitality destinations.</p>
 </div>
-<div class="chart-box">
-<div style="display:flex; justify-content:center; padding:0 40px;">
-<div id="bar_chart"></div>
-</div>
-<p class="chart-insight">Melbourne CBD possesses the largest seating capacity, reflecting its concentration of restaurants, cafés and entertainment venues. Seating capacity decreases considerably across the remaining suburbs, highlighting the centralisation of Melbourne's hospitality infrastructure.</p>
-</div>
 <h2>3. High-Density Suburb Micro-Analysis</h2>
 <p>Examining seating allocation across suburbs reveals how hospitality spaces are configured, highlighting differences in indoor and outdoor dining capacity throughout Melbourne.</p>
 <div class="chart-box">
+<div style="display:flex; justify-content:center; padding:0 40px;">
 <div id="facet_grid"></div>
 </div>
-
+<p class="chart-insight">Melbourne CBD possesses the largest seating capacity, reflecting its concentration of restaurants, cafés and entertainment venues. Seating capacity decreases considerably across the remaining suburbs, highlighting the centralisation of Melbourne's hospitality infrastructure.</p>
+</div>
 
 <h3>Largest Hospitality Venues</h3>
 <p>A small number of venues account for a significant proportion of Melbourne's hospitality seating capacity.</p>
@@ -153,8 +149,6 @@ vegaEmbed('#map', 'map.json?v=5', {"actions": false}).catch(console.error);
 vegaEmbed('#bubble_map', 'bubble_map.json?v=1', {"actions": false}).catch(console.error);
 
 vegaEmbed('#cafe_count_chart', 'cafe_count.json?v=1', {"actions": false}).catch(console.error);
-
-vegaEmbed('#bar_chart', 'bar.json?v=5', {"actions": false}).catch(console.error);
 
 vegaEmbed('#facet_grid', 'seating_facets.json?v=5', {"actions": false}).catch(console.error);
 
