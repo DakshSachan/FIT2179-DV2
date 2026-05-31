@@ -93,6 +93,10 @@ Melbourne's hospitality seating capacity.
 
 <div id="largest_cafe" class="chart-box"></div>
 
+<h3>Occupation Profile of Melbourne Postcodes</h3>
+<p>The occupational composition of Melbourne postcodes provides additional context for understanding the workforce that supports the city's café culture.</p>
+<div id="occupation_chart" class="chart-box"></div>
+
   <h2>5. ABS Census Demographic Context</h2>
   <p>By combining café location data with ABS census information, we can explore whether higher-income areas support larger café and hospitality sectors. </p>
 <div id="income_chart" class="chart-box"></div>
@@ -126,6 +130,8 @@ vegaEmbed('#facet_grid', 'seating_facets.json?v=5', {"actions": false}).catch(co
 vegaEmbed('#largest_cafe', 'largest_cafe.json?v=1', {"actions": false}).catch(console.error);
 
 vegaEmbed('#income_chart', 'income_bar.json?v=1', {"actions": false}).catch(console.error);
+
+vegaEmbed('#occupation_chart', 'occupation.json?v=1', {"actions": false}).catch(console.error);
 
 </script>
 
