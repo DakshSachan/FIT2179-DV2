@@ -118,6 +118,11 @@ capacity, while outdoor seating plays a smaller but important role in the city's
 
 <div id="seating_type_donut" class="chart-box"></div>
 
+<h3>Income and Hospitality Activity</h3>
+<p>Comparing household income with hospitality activity helps explore whether wealthier areas support larger café and restaurant sectors.
+</p>
+<div id="income_scatter" class="chart-box"></div>
+
 
 
   <h2>5. ABS Census Demographic Context</h2>
@@ -159,6 +164,8 @@ vegaEmbed('#occupation_chart', 'occupation.json?v=1', {"actions": false}).catch(
 vegaEmbed('#industry_chart', 'industry.json?v=1', {"actions": false}).catch(console.error);
   
 vegaEmbed('#seating_type_donut','seating_type.json?v=1',{"actions": false}).catch(console.error);
+
+vegaEmbed('#income_scatter','incomeVScafe.json?v=1',{"actions": false}).catch(console.error);
 </script>
 
 </body>
